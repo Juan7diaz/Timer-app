@@ -3,7 +3,6 @@ import { useTimer } from '../hooks/useTimer'
 import Buttons from './buttons/Buttons'
 import SeeTimer from './SeeTimer/SeeTimer'
 
-
 const TimerWithCustomHooks = () => {
     const [events, setEvents] = useState({
         start: false,

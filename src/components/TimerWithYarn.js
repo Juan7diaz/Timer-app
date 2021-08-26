@@ -1,6 +1,6 @@
-import { useTimer } from  "reactjs-countdown-hook";
-import ButtonsIndividual from './buttons/ButtonsIndividual';
-import SeeTimer from './SeeTimer/SeeTimer';
+import { useTimer } from  "reactjs-countdown-hook"
+import ButtonsIndividual from './buttons/ButtonsIndividual'
+import SeeTimer from './SeeTimer/SeeTimer'
 import { Stack, Center } from '@chakra-ui/react'
 
 const TimerWithYarn = () => {
@@ -22,7 +22,6 @@ const TimerWithYarn = () => {
             <SeeTimer 
                 minutes={ parseInt( minutes ) }
                 seconds={ parseInt( seconds ) }
-                progress={ parseInt( counter/initialMinute * 100 ) }
             />
 
             <Center>

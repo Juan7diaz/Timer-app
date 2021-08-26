@@ -36,6 +36,7 @@ export const useTimer = ( initialState, events ) => {
         }, 1000)
     }
 
+    //si reset es true da error
     if( reset ){
         clearTimeout()
         setMinutes( initialState )
