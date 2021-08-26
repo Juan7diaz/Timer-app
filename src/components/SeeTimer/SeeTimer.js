@@ -1,33 +1,24 @@
-import "./SeeTimer.css"
 import PropTypes from 'prop-types';
-import ProgressBar from 'react-bootstrap/ProgressBar'
+import { Center, Spacer, Heading, Box,SimpleGrid,Flex } from "@chakra-ui/react";
 
-const SeeTimer = ({ minutes, seconds, progress }) => {
+const SeeTimer = ({ minutes, seconds }) => {
 
-    console.log("hola see timer")
+    const style = {
+        'padding':'5rem', 'borderRadius':'10%'
+    }
 
     return (
-        <div className="banda">
-            <div className="container">
-                <div className="reloj">
-                    <p id="minutos" className="minutos">{ minutes }</p>
-                    <p>:</p>
-                    <p id="segundos" className="segundos">{ seconds }</p>
-                </div>
-                    <ProgressBar 
-                        variant="info"
-                        style={{'borderRadius': '0px'}}
-                        now={ progress } 
-                    />
-            </div>
-      </div>
+        <Center style={{'padding':'3rem'}}>
+            <Box bg="theme.primary" style={style}>
+                <Heading  size="2xl" color="theme.fontColor">{minutes}:{seconds}</Heading>
+            </Box>
+        </Center>
     )
 }
 
 SeeTimer.propTypes = {
     minutes: PropTypes.number.isRequired,
     seconds: PropTypes.number.isRequired,
-    progress: PropTypes.number.isRequired
 }
 
 export default SeeTimer

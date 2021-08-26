@@ -1,15 +1,16 @@
-import Button from 'react-bootstrap/Button'
+import { Button } from "@chakra-ui/react"
 
 const ButtonsIndividual = ({ buttonName, action, color }) => {
     return (
         <>
             <Button 
-                variant={ color } 
+                color='theme.fontColor'
+                bg={ color }
                 size="lg"
                 onClick={ action }
             >
             { buttonName }
-            </Button>{' '}
+            </Button>
         </>
 
     )

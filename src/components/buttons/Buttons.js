@@ -1,5 +1,4 @@
-import { useEffect } from 'react'
-import Button from 'react-bootstrap/Button'
+import { Button, Stack, Center } from "@chakra-ui/react"
 
 const Buttons = ({ setEvents }) => {
 
@@ -28,36 +27,36 @@ const Buttons = ({ setEvents }) => {
     }
 
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col text-center">
-                    <Button 
-                        variant="success" 
-                        size="lg"
-                        onClick={ start }
-                    >
-                        Start
-                    </Button>{' '}
+        <Center>
+            <Stack spacing={4} direction="row">
+                <Button 
+                    color="theme.fontColor"
+                    bg="theme.start"
+                    size="lg"
+                    onClick={ start }
+                >
+                Start
+                </Button>
 
-                    <Button 
-                        variant="warning" 
-                        size="lg"
-                        onClick={ reset }
-                    >
-                        Reset
-                    </Button>{' '}
+                <Button      
+                    color="theme.fontColor"
+                    bg="theme.pause" 
+                    size="lg"
+                    onClick={ stop }
+                >
+                Pause
+                </Button>
 
-                    <Button 
-                        variant="danger" 
-                        size="lg"
-                        onClick={ stop }
-                    >
-                        Stop
-                    </Button>
-                
-                </div>
-            </div>
-        </div>
+                <Button 
+                    color="theme.fontColor"
+                    bg="theme.reset"
+                    size="lg"
+                    onClick={ reset }
+                >
+                Reset
+                </Button>
+            </Stack>
+        </Center>
     )
 }
 

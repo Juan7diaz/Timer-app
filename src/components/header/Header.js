@@ -1,13 +1,13 @@
 import React from 'react'
-import { Navbar, Container} from 'react-bootstrap'
+import { Box, Text } from "@chakra-ui/react"
 
 const Header = ({ title }) => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Container>
-                <Navbar.Brand>{ title }</Navbar.Brand>
-            </Container>
-        </Navbar>
+        <Box bg="tomato" w="100%" p={4}  bg="theme.primary">
+            <Text fontSize="lg" fontWeight="bold" color="white">
+                { title }
+            </Text>
+        </Box>
     )
 }
 

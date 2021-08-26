@@ -1,11 +1,11 @@
 import { useTimer } from  "reactjs-countdown-hook";
 import ButtonsIndividual from './buttons/ButtonsIndividual';
-import Container from "./container/Container";
 import SeeTimer from './SeeTimer/SeeTimer';
+import { Stack, Center } from '@chakra-ui/react'
 
 const TimerWithYarn = () => {
 
-    const initialMinute = 10;
+    const initialMinute = 300;
 
     const {
         counter,
@@ -18,30 +18,33 @@ const TimerWithYarn = () => {
     } = useTimer( initialMinute );
 
     return (
-        <div>
+        <>
             <SeeTimer 
                 minutes={ parseInt( minutes ) }
                 seconds={ parseInt( seconds ) }
                 progress={ parseInt( counter/initialMinute * 100 ) }
             />
-            <Container>
-                <ButtonsIndividual 
-                    color={ 'success' } 
-                    action={ start }
-                    buttonName={ 'Start' }
-                />
-                <ButtonsIndividual 
-                    color={ 'warning' } 
-                    action={ pause }
-                    buttonName={ 'Pause' }
-                />
-                <ButtonsIndividual 
-                    color={ 'danger' } 
-                    action={ reset }
-                    buttonName={ 'Reset' }
-                />
-            </Container>
-        </div>
+
+            <Center>
+                <Stack spacing={4} direction="row" align="center">
+                    <ButtonsIndividual 
+                        color={ 'theme.start' } 
+                        action={ start }
+                        buttonName={ 'Start' }
+                    />
+                    <ButtonsIndividual 
+                        color={ 'theme.pause' } 
+                        action={ pause }
+                        buttonName={ 'Pause' }
+                    />
+                    <ButtonsIndividual 
+                        color={ 'theme.reset' } 
+                        action={ reset }
+                        buttonName={ 'Reset' }
+                    />
+                </Stack>
+            </Center>
+        </>
     )
 }
 

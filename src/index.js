@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { ChakraProvider } from "@chakra-ui/react"
+import { theme } from './style/theme'
 
 ReactDOM.render(
-  <App />,
+  <ChakraProvider theme={ theme }>
+    <App/>
+  </ChakraProvider>,
   document.getElementById('root')
 );
