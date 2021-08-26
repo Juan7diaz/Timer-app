@@ -1,6 +1,10 @@
 import "./SeeTimer.css"
+import PropTypes from 'prop-types';
 
 const SeeTimer = ({ minutes, seconds}) => {
+
+    console.log("hola see timer")
+
     return (
         <div className="banda">
             <div className="container">
@@ -12,6 +16,11 @@ const SeeTimer = ({ minutes, seconds}) => {
             </div>
       </div>
     )
+}
+
+SeeTimer.propTypes = {
+    minutes: PropTypes.number.isRequired,
+    seconds: PropTypes.number.isRequired
 }
 
 export default SeeTimer

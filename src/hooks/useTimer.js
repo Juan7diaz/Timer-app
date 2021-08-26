@@ -22,7 +22,6 @@ export const useTimer = ( initialState, events ) => {
     }
 
     const resetSec = () =>{
-        clearTimeout()
         setSeconds( 60 )
     }
 
@@ -37,8 +36,8 @@ export const useTimer = ( initialState, events ) => {
         }, 1000)
     }
 
-    //si reset es true pues no sirve:)
     if( reset ){
+        clearTimeout()
         setMinutes( initialState )
         setSeconds( 0 )
     }

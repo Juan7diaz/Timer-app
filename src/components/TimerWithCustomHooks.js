@@ -4,7 +4,7 @@ import Buttons from './buttons/Buttons'
 import SeeTimer from './SeeTimer/SeeTimer'
 
 
-const Timer = () => {
+const TimerWithCustomHooks = () => {
     const [events, setEvents] = useState({
         start: false,
         resert: false,
@@ -24,4 +24,4 @@ const Timer = () => {
     )
 }
 
-export default Timer
+export default TimerWithCustomHooks

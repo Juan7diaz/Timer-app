@@ -1,10 +1,13 @@
-import Timer from './components/Timer'
-import Header from './components/Header'
+//import TimerWithCustomHooks from './components/TimerWithCustomHooks'
+import Header from './components/header/Header'
+import TimerWithYarn from './components/TimerWithYarn'
+
 const App = () => {
   return (
     <>
       <Header title='TIMER APP 🤨'/>
-      <Timer />
+      {/* <TimerWithCustomHooks /> */}
+      <TimerWithYarn />
     </>
   )
 }

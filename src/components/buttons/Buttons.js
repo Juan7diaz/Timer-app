@@ -36,7 +36,7 @@ const Buttons = ({ setEvents }) => {
                         size="lg"
                         onClick={ start }
                     >
-                        Star
+                        Start
                     </Button>{' '}
 
                     <Button 

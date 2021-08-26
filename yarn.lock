@@ -9904,6 +9904,11 @@ react@^17.0.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
+reactjs-countdown-hook@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/reactjs-countdown-hook/-/reactjs-countdown-hook-1.0.2.tgz#2d1c301ce3449849a752b2d7dcb49889cf8e4a72"
+  integrity sha512-Cxhe6UisCjKa5cD7P3h8Cn24AJkZvv7Ma45zfAFfgH9Bi6SibS1SkJsinmMeV+cLEbEgRUukudUdyvO+M7wcUQ==
+
 read-pkg-up@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-3.0.0.tgz#3ed496685dba0f8fe118d0691dc51f4a1ff96f07"
