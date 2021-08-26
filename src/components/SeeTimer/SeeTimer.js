@@ -1,7 +1,8 @@
 import "./SeeTimer.css"
 import PropTypes from 'prop-types';
+import ProgressBar from 'react-bootstrap/ProgressBar'
 
-const SeeTimer = ({ minutes, seconds}) => {
+const SeeTimer = ({ minutes, seconds, progress }) => {
 
     console.log("hola see timer")
 
@@ -13,6 +14,11 @@ const SeeTimer = ({ minutes, seconds}) => {
                     <p>:</p>
                     <p id="segundos" className="segundos">{ seconds }</p>
                 </div>
+                    <ProgressBar 
+                        variant="info"
+                        style={{'borderRadius': '0px'}}
+                        now={ progress } 
+                    />
             </div>
       </div>
     )
@@ -20,7 +26,8 @@ const SeeTimer = ({ minutes, seconds}) => {
 
 SeeTimer.propTypes = {
     minutes: PropTypes.number.isRequired,
-    seconds: PropTypes.number.isRequired
+    seconds: PropTypes.number.isRequired,
+    progress: PropTypes.number.isRequired
 }
 
 export default SeeTimer
