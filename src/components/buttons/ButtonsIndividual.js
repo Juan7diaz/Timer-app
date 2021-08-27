@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/react"
 
-const ButtonsIndividual = ({ buttonName, action, color }) => {
+const ButtonsIndividual = ({ ButtonsType, buttonName, action, color }) => {
     return (
         <>
             <Button 

@@ -1,0 +1,11 @@
+.Box {
+    padding: 5rem;
+    border-radius: 100%;
+    -webkit-box-shadow: 2px 36px 37px -12px rgba(0,210,211,0.41), 2px -11px 29px -2px rgba(255,107,107,0.41), -50px 0px 32px -21px rgba(29,209,161,0.41), 50px 0px 32px -21px rgba(254,202,87,0.41);
+    box-Shadow: 2px 36px 37px -12px rgba(0,210,211,0.41), 2px -11px 29px -2px rgba(255,107,107,0.41), -50px 0px 32px -21px rgba(29,209,161,0.41), 50px 0px 32px -21px rgba(254,202,87,0.41);
+   
+}
+
+.Center {
+    padding: 3rem;
+}

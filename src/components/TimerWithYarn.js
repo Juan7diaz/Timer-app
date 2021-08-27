@@ -1,12 +1,16 @@
-import { useTimer } from  "reactjs-countdown-hook"
-import ButtonsIndividual from './buttons/ButtonsIndividual'
-import SeeTimer from './SeeTimer/SeeTimer'
+import { useState } from 'react'
 import { Stack, Center } from '@chakra-ui/react'
+import { useTimer } from  "reactjs-countdown-hook"
+import { BreakType } from '../data/BreakType'
+import ButtonsIndividual from './buttons/ButtonsIndividual'
+import BreakTab from "./breakTab/BreakTab"
+import SeeTimer from './SeeTimer/SeeTimer'
 
 const TimerWithYarn = () => {
 
-    const initialMinute = 300;
+    const [initialMinute, setInitialMinute] = useState( 1500 )
 
+    //https://www.npmjs.com/package/reactjs-countdown-hook
     const {
         counter,
         isActive,
@@ -19,6 +23,12 @@ const TimerWithYarn = () => {
 
     return (
         <>
+            <BreakTab 
+                BreakType={ BreakType }
+                setInitialMinute={ setInitialMinute }
+                reset={ reset }
+            /> 
+
             <SeeTimer 
                 minutes={ parseInt( minutes ) }
                 seconds={ parseInt( seconds ) }

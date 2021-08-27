@@ -2,6 +2,10 @@ import { useState } from 'react'
 
 export const useTimer = ( initialState, events ) => {
 
+    //este customHook recibe:
+    //initialState : minuto donde inicia a contar
+    //events: las acciones que hace el time (inicar, restablecer, detener)
+
     const { start, reset } = events
 
     const [minutes, setMinutes] = useState( initialState )
@@ -42,6 +46,11 @@ export const useTimer = ( initialState, events ) => {
         setMinutes( initialState )
         setSeconds( 0 )
     }
+
+    //devuele--
+    //minutes: los minutos faltante
+    //seconds: los segundos faltantes
+    //flag: bool que indica cuando el contador llega a 0 -> ( false )
     
     return { minutes, seconds, flag }
 }

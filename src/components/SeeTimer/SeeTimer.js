@@ -1,16 +1,11 @@
 import PropTypes from 'prop-types';
 import { Center, Heading, Box, Spinner } from "@chakra-ui/react";
+import './SeeTimer.css'
 
 const SeeTimer = ({ minutes, seconds }) => {
-
-    const style = {
-        'padding':'5rem', 
-        'borderRadius':'20%'
-    }
-
     return (
-        <Center style={{'padding':'3rem'}}>
-            <Box bg="theme.primary" style={style}>
+        <Center className='Center'>
+            <Box bg="theme.primary" className='Box'>
                 {
                     seconds >= 0 
                     ?

@@ -5,7 +5,7 @@ import TimerWithYarn from './components/TimerWithYarn'
 const App = () => {
   return (
     <>
-      <Header title='TIMER APP 🤨'/>
+      <Header title='🍐 PEAR TIMER'/>
       {/* <TimerWithCustomHooks /> */}
       <TimerWithYarn />
     </>
