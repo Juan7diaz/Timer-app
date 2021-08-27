@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 import { Select, Box, Center } from '@chakra-ui/react'
 
-const  BreakTab = ({ BreakType, setInitialMinute, reset }) => {
+const  BreakTab = ({ BreakType, setInitialMinute }) => {
 
     const handleSelectChange = (e) =>{
-        console.log(e.target.value )
         setInitialMinute( parseInt( e.target.value ) )
-        reset() //cuando se hace el cambio es necesesario resetear para ver el valor nuevo
     }
 
     return (
@@ -32,7 +30,6 @@ const  BreakTab = ({ BreakType, setInitialMinute, reset }) => {
 BreakTab.propTypes = {
     BreakType: PropTypes.array.isRequired,
     setInitialMinute: PropTypes.func.isRequired,
-    reset: PropTypes.func.isRequired,
 }
   
 export default BreakTab

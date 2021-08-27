@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Stack, Center } from '@chakra-ui/react'
 import { useTimer } from  "reactjs-countdown-hook"
 import { BreakType } from '../data/BreakType'
@@ -20,13 +20,17 @@ const TimerWithYarn = () => {
         resume:start,
         reset,
     } = useTimer( initialMinute );
+    
+    useEffect(() => {   
+        reset() 
+        //cuando el valor de initialMinute cambia es necesario reset() para actualizar al nuevo valor
+    }, [ initialMinute ])
 
     return (
         <>
             <BreakTab 
                 BreakType={ BreakType }
                 setInitialMinute={ setInitialMinute }
-                reset={ reset }
             /> 
 
             <SeeTimer 
