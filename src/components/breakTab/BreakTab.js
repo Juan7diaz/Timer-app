@@ -12,10 +12,10 @@ const  BreakTab = ({ BreakType, setInitialMinute }) => {
             <Box>
                 <Select variant="outline" onChange={ handleSelectChange }>
                     {
-                        BreakType.map( (item, index) => 
-                            <option 
+                        BreakType.map( (item, index) =>
+                            <option
                                 key={ index }
-                                value={ item.seg } 
+                                value={ item.seg }
                             >
                                 { item.name }
                             </option>
@@ -31,5 +31,5 @@ BreakTab.propTypes = {
     BreakType: PropTypes.array.isRequired,
     setInitialMinute: PropTypes.func.isRequired,
 }
-  
+
 export default BreakTab

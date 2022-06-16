@@ -3,7 +3,7 @@ import { Button } from "@chakra-ui/react"
 const ButtonsIndividual = ({ ButtonsType, buttonName, action, color }) => {
     return (
         <>
-            <Button 
+            <Button
                 color='theme.fontColor'
                 bg={ color }
                 size="lg"

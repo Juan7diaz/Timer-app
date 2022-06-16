@@ -13,11 +13,10 @@ const TimerWithCustomHooks = () => {
 
     return (
         <div>
-            <SeeTimer 
-                minutes={ minutes } 
+            <SeeTimer
+                minutes={ minutes }
                 seconds={ seconds }
             />
-            
             <Buttons setEvents={ setEvents } />
         </div>
     )

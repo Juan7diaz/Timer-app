@@ -29,7 +29,7 @@ const Buttons = ({ setEvents }) => {
     return (
         <Center>
             <Stack spacing={4} direction="row">
-                <Button 
+                <Button
                     color="theme.fontColor"
                     bg="theme.start"
                     size="lg"
@@ -38,16 +38,16 @@ const Buttons = ({ setEvents }) => {
                 Start
                 </Button>
 
-                <Button      
+                <Button
                     color="theme.fontColor"
-                    bg="theme.pause" 
+                    bg="theme.pause"
                     size="lg"
                     onClick={ stop }
                 >
                 Pause
                 </Button>
 
-                <Button 
+                <Button
                     color="theme.fontColor"
                     bg="theme.reset"
                     size="lg"

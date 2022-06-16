@@ -51,6 +51,6 @@ export const useTimer = ( initialState, events ) => {
     //minutes: los minutos faltante
     //seconds: los segundos faltantes
     //flag: bool que indica cuando el contador llega a 0 -> ( false )
-    
+
     return { minutes, seconds, flag }
 }

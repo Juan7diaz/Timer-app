@@ -7,11 +7,11 @@ const SeeTimer = ({ minutes, seconds }) => {
         <Center className='Center'>
             <Box bg="theme.primary" className='Box'>
                 {
-                    seconds >= 0 
+                    seconds >= 0
                     ?
                     <Heading  size="2xl" color="theme.fontColor">{minutes}:{seconds}</Heading>
                     :
-                    <Spinner color="theme.fontColor" size="xl" />            
+                    <Spinner color="theme.fontColor" size="xl" />
                 }
             </Box>
         </Center>
